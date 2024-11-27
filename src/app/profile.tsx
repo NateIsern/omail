@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabaseClient } from '../../lib/supabaseClient';
+import { supabase } from '../../lib/supabaseClient';
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -9,9 +9,9 @@ const Profile = () => {
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const user = supabaseClient.auth.user();
+      const user = supabase.auth.user();
       if (user) {
-        const { data, error } = await supabaseClient
+        const { data, error } = await supabase
           .from('users')
           .select('username, email')
           .eq('id', user.id)
@@ -35,7 +35,7 @@ const Profile = () => {
     e.preventDefault();
     setLoading(true);
 
-    const { error } = await supabaseClient
+    const { error } = await supabase
       .from('users')
       .update({ username, email })
       .eq('id', user.id);

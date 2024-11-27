@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { supabaseClient } from '../../lib/supabaseClient';
+import { supabase } from '../../lib/supabaseClient';
 
 export default function Compose() {
   const [recipient, setRecipient] = useState('');
@@ -17,7 +17,7 @@ export default function Compose() {
       return;
     }
 
-    const { data, error } = await supabaseClient
+    const { data, error } = await supabase
       .from('sent')
       .insert([{ recipient, subject, content, sent_at: new Date() }]);
 

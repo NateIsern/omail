@@ -1,6 +1,7 @@
-import { supabaseClient } from '../../lib/supabaseClient';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { supabase } from '../../lib/supabaseClient';
 
-export default async function handler(req, res) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { sender, subject, content } = req.body;
 
@@ -10,7 +11,7 @@ export default async function handler(req, res) {
     }
 
     // Insert email data into the 'inbox' table
-    const { data, error } = await supabaseClient
+    const { data, error } = await supabase
       .from('inbox')
       .insert([{ sender, subject, content, received_at: new Date() }]);
 

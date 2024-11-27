@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabaseClient } from '../../lib/supabaseClient';
+import { supabase } from '../../lib/supabaseClient';
 
 const Inbox = () => {
   const [emails, setEmails] = useState([]);
@@ -7,7 +7,7 @@ const Inbox = () => {
 
   useEffect(() => {
     const fetchEmails = async () => {
-      const { data, error } = await supabaseClient
+      const { data, error } = await supabase
         .from('inbox')
         .select('*')
         .order('received_at', { ascending: false });
@@ -24,7 +24,7 @@ const Inbox = () => {
   }, []);
 
   const handleDelete = async (id) => {
-    const { error } = await supabaseClient
+    const { error } = await supabase
       .from('inbox')
       .delete()
       .eq('id', id);
@@ -37,7 +37,7 @@ const Inbox = () => {
   };
 
   const handleMarkAsSpam = async (id) => {
-    const { error } = await supabaseClient
+    const { error } = await supabase
       .from('inbox')
       .update({ is_spam: true })
       .eq('id', id);

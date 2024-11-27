@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabaseClient } from '../../lib/supabaseClient';
+import { supabase } from '../../lib/supabaseClient';
 
 const Sent = () => {
   const [emails, setEmails] = useState([]);
@@ -7,7 +7,7 @@ const Sent = () => {
 
   useEffect(() => {
     const fetchEmails = async () => {
-      const { data, error } = await supabaseClient
+      const { data, error } = await supabase
         .from('sent')
         .select('*')
         .order('sent_at', { ascending: false });
@@ -24,7 +24,7 @@ const Sent = () => {
   }, []);
 
   const handleDelete = async (id) => {
-    const { error } = await supabaseClient
+    const { error } = await supabase
       .from('sent')
       .delete()
       .eq('id', id);
