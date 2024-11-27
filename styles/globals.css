@@ -1,0 +1,175 @@
+/* Global styles for the email app */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+/* Styles for the inbox page */
+.inbox-container {
+  padding: 20px;
+}
+
+.inbox-container h1 {
+  margin-bottom: 20px;
+}
+
+.inbox-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.inbox-container li {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inbox-container li h2 {
+  margin: 0 0 10px 0;
+}
+
+.inbox-container li p {
+  margin: 5px 0;
+}
+
+.inbox-container li button {
+  margin-right: 10px;
+}
+
+/* Styles for the sent page */
+.sent-container {
+  padding: 20px;
+}
+
+.sent-container h1 {
+  margin-bottom: 20px;
+}
+
+.sent-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sent-container li {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sent-container li h2 {
+  margin: 0 0 10px 0;
+}
+
+.sent-container li p {
+  margin: 5px 0;
+}
+
+.sent-container li button {
+  margin-right: 10px;
+}
+
+/* Styles for the compose page */
+.compose-container {
+  padding: 20px;
+}
+
+.compose-container h1 {
+  margin-bottom: 20px;
+}
+
+.compose-container form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.compose-container form div {
+  margin-bottom: 15px;
+}
+
+.compose-container form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.compose-container form input,
+.compose-container form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.compose-container form button {
+  display: block;
+  width: 100%;
+}
+
+/* Styles for the profile page */
+.profile-container {
+  padding: 20px;
+}
+
+.profile-container h1 {
+  margin-bottom: 20px;
+}
+
+.profile-container form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container form div {
+  margin-bottom: 15px;
+}
+
+.profile-container form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.profile-container form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-container form button {
+  display: block;
+  width: 100%;
+}
