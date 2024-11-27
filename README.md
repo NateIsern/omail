@@ -163,11 +163,11 @@ npm run dev
 
 ## Project Structure
 
-- `pages/api`: Contains API routes for sending and receiving emails, and user authentication.
-- `pages/profile.js`: User profile page for updating personal information and settings.
-- `pages/inbox.js`: User interface for displaying received emails.
-- `pages/sent.js`: User interface for displaying sent emails.
-- `pages/compose.js`: User interface for composing and sending emails.
+- `src/app/api`: Contains API routes for sending and receiving emails, and user authentication.
+- `src/app/profile.tsx`: User profile page for updating personal information and settings.
+- `src/app/inbox.tsx`: User interface for displaying received emails.
+- `src/app/sent.tsx`: User interface for displaying sent emails.
+- `src/app/compose.tsx`: User interface for composing and sending emails.
 - `lib/supabaseClient.js`: Initializes and exports the Supabase client.
 - `lib/prismaClient.js`: Initializes and exports the Prisma client.
 - `prisma/schema.prisma`: Defines the database schema for users, emails, inbox, and sent tables.
